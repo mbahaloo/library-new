@@ -1,0 +1,22 @@
+<br><br>
+<br><br>
+<p id="notice"><%= notice %></p>
+<strong><p>Selected Book's Information</p></strong>
+<p>
+  <strong>name:</strong>
+  <%= @book.name %>
+</p>
+ 
+<p>
+  <strong>category:</strong>
+  <%= @book.category %>
+</p>
+
+<p>
+  <strong>author:</strong>
+  <%= @book.author %>
+</p>
+<%= link_to 'Back', books_path %>
+<% if can? :manage, @book %>
+<%= link_to 'Edit', edit_book_path(@book) %>
+<%end%>
